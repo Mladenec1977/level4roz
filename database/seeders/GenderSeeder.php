@@ -20,7 +20,7 @@ class GenderSeeder extends Seeder
         while (true) {
             $genderId = Http::get('https://www.swapi.tech/api/people/' . $id);
             $genderText = $genderId->json();
-            print_r($genderText);
+
             if (! isset($genderText['result'])) {
                 $i = 0;
                 while ($i < 5) {
